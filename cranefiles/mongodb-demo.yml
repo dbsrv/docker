@@ -1,0 +1,6 @@
+containers:
+  mongo-rs0-0:
+    image: gisgit/rs0-0
+    run:
+      publish: ["27017:27017"]
+      detach: true
