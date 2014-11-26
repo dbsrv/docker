@@ -1,6 +1,6 @@
 containers:
-  mongo-rs0-0:
-    image: gisgit/rs0-0
+  mongodb:
+    image: phel002c505113f.karmalab.net:5000/mongodb
     run:
       publish: ["27017:27017"]
       detach: true
