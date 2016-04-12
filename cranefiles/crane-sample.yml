@@ -1,0 +1,25 @@
+containers:
+    apache:
+        dockerfile: apache
+        image: michaelsauter/apache
+        run:
+            volumes-from: ["crane_app"]
+            publish: ["80:80"]
+            link: ["crane_mysql:db", "crane_memcached:cache"]
+            detach: true
+    app:
+        dockerfile: app
+        image: michaelsauter/app
+        run:
+            volume: ["app/www:/srv/www:rw"]
+            detach: true
+    mysql:
+        dockerfile: mysql
+        image: michaelsauter/mysql
+        run:
+            detach: true
+    memcached:
+        dockerfile: memcached
+        image: michaelsauter/memcached
+        run:
+            detach: true

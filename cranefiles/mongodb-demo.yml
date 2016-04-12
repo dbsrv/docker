@@ -1,0 +1,6 @@
+containers:
+  mongodb:
+    image: 10.208.16.245:5000/mongodb
+    run:
+      publish: ["27017:27017"]
+      detach: true

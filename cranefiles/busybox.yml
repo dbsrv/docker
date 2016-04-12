@@ -1,0 +1,5 @@
+containers:
+  busybox:
+    image: busybox:latest
+    run:
+      cmd: /bin/echo "I'm running inside a container!"
